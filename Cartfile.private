@@ -1,0 +1,2 @@
+github "vadymmarkov/Fakery" ~> 2.0.0
+github "uphold-forks/Mockingjay" "support/add-carthage-configuration"

@@ -1,0 +1,17 @@
+language: objective-c
+
+osx_image: xcode9.1
+
+env:
+  - SCHEME=UpholdSdk
+  - SCHEME=UpholdSdkSandbox
+
+before_script:
+  - carthage bootstrap --platform iOS --no-build
+  - cd Carthage/Checkouts/URITemplate.swift && echo "IPHONEOS_DEPLOYMENT_TARGET = 8.0" > Configuration.xcconfig && swift package generate-xcodeproj --xcconfig-overrides Configuration.xcconfig
+  - cd ../../../
+  - carthage build --platform iOS --configuration ProductionRelease
+
+script:
+  - swiftlint lint --strict
+  - xcodebuild -project UpholdSdk.xcodeproj test -scheme $SCHEME -sdk iphonesimulator -destination "name=iPhone SE" | xcpretty

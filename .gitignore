@@ -1,0 +1,30 @@
+# Build generated
+build/
+DerivedData
+
+# Carthage
+Carthage/
+
+# Mac OS X
+.DS_Store
+
+# Swift package manager
+.build/
+Packages/
+
+# Xcode settings
+!default.mode1v3
+!default.mode2v3
+!default.pbxuser
+!default.perspectivev3
+*.hmap
+*.ipa
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+xcuserdata

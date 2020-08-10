@@ -1,0 +1,5 @@
+github "Hearst-DD/ObjectMapper" ~> 2.2.8
+github "mxcl/OMGHTTPURLRQ" ~> 3.2.2
+github "mxcl/PromiseKit" ~> 4.1.8
+github "marketplacer/keychain-swift" ~> 8.0.0
+github "theadam/SwiftClient" ~> 3.0.3
